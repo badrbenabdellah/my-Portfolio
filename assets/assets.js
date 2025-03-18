@@ -44,6 +44,8 @@ import world_code from './world-code.png'
 import device_mobile_code from './device-mobile-code.png'
 import recommendation from './recommendation.png'
 import deep_learning from './deep-learning.png'
+import react from './react.png'
+import spring_boot from './spring-boot.png'
 
 
 export const assets = {
@@ -92,7 +94,9 @@ export const assets = {
     world_code,
     device_mobile_code,
     recommendation,
-    deep_learning
+    deep_learning,
+    react,
+    spring_boot
 };
 
 export const workData = [
@@ -134,5 +138,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.mysql, assets.github, assets.java
+    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.mysql, assets.github, assets.java, assets.react, assets.spring_boot
 ];

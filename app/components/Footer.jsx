@@ -16,9 +16,10 @@ const Footer = ({isDarkMode}) => {
         <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
             <p>©2025 Badr Benabdellah.All Right reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-                <li><a target='_blank' href=''> Github </a></li>
-                <li><a target='_blank' href=''> Linkedin </a></li>
-                <li><a target='_blank' href=''> X </a></li>
+                <li><a target='_blank' href='https://github.com/badrbenabdellah'> Github </a></li>
+                <li><a target='_blank' href='https://www.linkedin.com/in/badr-benabdellah/'> Linkedin </a></li>
+                <li><a target='_blank' href='https://leetcode.com/u/badrben/'> leetcode </a></li>
+                <li><a target='_blank' href='https://www.hackerrank.com/profile/benabdellahbadr3'> hackerrank </a></li>
             </ul>
         </div>
       

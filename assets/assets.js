@@ -46,7 +46,13 @@ import recommendation from './recommendation.png'
 import deep_learning from './deep-learning.png'
 import react from './react.png'
 import spring_boot from './spring-boot.png'
-
+import angular from './angular.png'
+import oracle from './oracle.png'
+import js from './js.png'
+import typescript from './typescript.png'
+import docker from './docker.png'
+import scrum from './scrum.png'
+import python from './python.jpeg'
 
 export const assets = {
     user_image,
@@ -96,7 +102,14 @@ export const assets = {
     recommendation,
     deep_learning,
     react,
-    spring_boot
+    spring_boot,
+    angular,
+    oracle,
+    js,
+    typescript,
+    docker,
+    scrum,
+    python
 };
 
 export const workData = [
@@ -138,5 +151,6 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.mysql, assets.github, assets.java, assets.react, assets.spring_boot
+    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.mysql, assets.github, assets.java, assets.react, assets.spring_boot, assets.angular, 
+    assets.oracle, assets.js, assets.typescript, assets.docker, assets.scrum, assets.python
 ];

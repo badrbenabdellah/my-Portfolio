@@ -14,8 +14,11 @@ const About = ({isDarkMode}) => {
             </div>
             <div className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'>
-                    I am a full-stack developer skilled in Next.js, Angular, and Spring Boot with a microservices architecture. 
-                    I build high-performance web applications and integrate AI solutions using my expertise in machine learning and deep learning.
+                    As a software engineer, I've spent over 2 years immersed in the world of software development. I love building software, debugging, 
+                    trying new technologies, and connecting with people from the same community  - I just love my work! My expertise extends to deep learning, 
+                    artificial intelligence, and machine learning, where I design and implement intelligent systems that solve complex problems. 
+                    I specialize in creating solutions that are not just technically robust but also scalable and future-ready. 
+                    Let's work together to bring your ideas to life!
                 </p>
                 
                 <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
@@ -28,7 +31,7 @@ const About = ({isDarkMode}) => {
                     ))}
                 </ul>
 
-                <h4 className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I use</h4>
+                <h2 className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I use</h2>
                 <ul className='flex items-center gap-3 sm:gap-3'>
                     {toolsData.map((tool, index) => (
                         <li key={index} className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>

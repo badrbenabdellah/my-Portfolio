@@ -39,6 +39,11 @@ import mysql from './mysql.png';
 import github from './github.png';
 import java from './java.png';
 import logo_badr from './badr-logo.png'
+import brand_shopee from './brand_shopee.png'
+import world_code from './world-code.png'
+import device_mobile_code from './device-mobile-code.png'
+import recommendation from './recommendation.png'
+import deep_learning from './deep-learning.png'
 
 
 export const assets = {
@@ -82,7 +87,12 @@ export const assets = {
     mysql,
     github,
     java,
-    logo_badr
+    logo_badr,
+    brand_shopee,
+    world_code,
+    device_mobile_code,
+    recommendation,
+    deep_learning
 };
 
 export const workData = [
@@ -109,10 +119,12 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.world_code, title: 'Custom Website Development ', description: 'Creation of personalized websites adapted to the specific needs of our clients, using the latest technologies and frameworks.', link: '' },
+    { icon: assets.brand_shopee, title: 'E-commerce solutions ', description: 'Development of complete e-commerce platforms with features such as inventory management, online payments and sales analysis....', link: '' },
+    { icon: assets.deep_learning, title: 'Deep Learning Solutions', description: 'Building deep neural networks for complex tasks such as computer vision, natural language processing (NLP), or content generation.', link: '' },
+    { icon: assets.recommendation, title: 'Recommendation Systems', description: 'Design of personalized recommendation algorithms for e-commerce platforms, streaming services, or social networks.', link: '' },
+    { icon: assets.device_mobile_code, title: 'Mobile app', description: 'Development of mobile applications compatible with both iOS and Android, using technologies like React Native or Flutter', link: '' },
+
 ]
 
 export const infoList = [

@@ -114,24 +114,24 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Mancala Game',
+        description: 'Intelligence Artificille',
+        bgImage: '/Mancala.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: "App Full Stack for Oracle DBA",
+        description: 'App Full-Stack + Oracle DB',
+        bgImage: '/Oracle.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Job Portal',
+        description: 'App Full-Stack',
+        bgImage: '/Fjobs.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'InvestBuddy',
+        description: "A FinTech platform for young investors, providing personalized advice with modern tech.",
+        bgImage: '/InvestBuddy.png',
     },
 ]
 

@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: Outfit;  
+:root {
+  --bg: #edf2f8;
+  --surface: #f8fbff;
+  --ink: #0f172a;
+  --muted: #4b5a6f;
+  --line: #c8d4e4;
+  --accent: #0f6c79;
+  --accent-strong: #0b5560;
+  --highlight: #9ecdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), sans-serif;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-shell {
+  background:
+    radial-gradient(circle at 9% 10%, rgba(158, 205, 248, 0.46), transparent 33%),
+    radial-gradient(circle at 88% 4%, rgba(15, 108, 121, 0.17), transparent 36%),
+    linear-gradient(180deg, #f3f7fc 0%, #edf2f8 50%, #e7edf6 100%);
+}
+
+.glass-card {
+  background: rgba(248, 251, 255, 0.84);
+  border: 1px solid rgba(120, 138, 162, 0.25);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+}
+
+.primary-btn:hover {
+  background: var(--accent-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(15, 118, 110, 0.24);
+}
+
+.secondary-btn {
+  border: 1px solid var(--line);
+  background: rgba(248, 251, 255, 0.95);
+  color: var(--ink);
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(22, 20, 18, 0.45);
+}
+
+.chip {
+  border: 1px solid rgba(120, 138, 162, 0.33);
+  background: rgba(248, 251, 255, 0.72);
+}
+
+.section-anchor {
+  scroll-margin-top: 6rem;
 }

@@ -1,27 +1,28 @@
-import { Outfit, Ovo } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight:["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
 });
 
-const ovo = Ovo({
-  subsets: ["latin"],  
-  weight:["400"]
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
 });
 
 export const metadata = {
   title: "Badr Benabdellah",
-  description: "Badr Benabdellah,Future Engineer in Software and Intelligent Systems,Passionate about computer science and innovative technologies.I am a curious and passionate developer, specializing in web development and artificial intelligence technologies. With a strong foundation in web development (Frontend and Backend), I master modern tools and frameworks to create performant and intuitive applications. At the same time, I am dedicated to exploring the fields of AI, including Machine Learning, Deep Learning, LLMs (Large Language Models), and Natural Language Processing (NLP).",
+  description:
+    "Portfolio de Badr Benabdellah, futur ingenieur logiciel et systemes intelligents, disponible pour une alternance en developpement Full-Stack et IA.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 oveflow-x-hidden dark:bg-darkTheme dark:text-white`}
-      >
+      <body className={`${manrope.variable} ${playfairDisplay.variable} antialiased leading-7`}>
         {children}
       </body>
     </html>

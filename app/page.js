@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -7,6 +7,7 @@ import { assets, toolsData } from "@/assets/assets";
 
 const navItems = [
   { label: "Profil", href: "#profile" },
+  { label: "Parcours", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Projets IA", href: "#projects" },
   { label: "Competences", href: "#skills" },
@@ -14,26 +15,62 @@ const navItems = [
 ];
 
 const proofPoints = [
-  { value: "2023-2026", label: "Cycle ingenieur Logiciels & Systemes Intelligents" },
-  { value: "2 stages", label: "Experience professionnelle en software et IA" },
-  { value: "FR C1 | EN B2 | AR C1", label: "Communication multilingue" },
+  { value: "Stage Alternance 2027", label: "Objectif: Data Scientist & Ingenieur IA" },
+  { value: "3 stages", label: "Expérience en Data Scientist & IA Engineering" },
+  { value: "Fr C1 - En B2 - Ar C1", label: "Communication professionnelle multilingue" },
+];
+
+const alternanceSignals = [
+  "À la recherche d'un Alternance - Data Scientist & ingénieur IA",
+  "Cycle d'ingénieur 2023 - 2026 (FST Tanger)",
+];
+
+const collaborationPromise = [
+  {
+    title: "Esprit d'équipe",
+    description:
+      "Collaboration efficace avec des équipes techniques et produit, communication claire et capacité à transformer les besoins métiers en solutions techniques IA et data.",
+  },
+  {
+    title: "Autonomie & Initiative",
+    description:
+      "Capacité à prendre en charge un projet de bout en bout : recherche, expérimentation, développement du modèle, intégration via API et amélioration continue.",
+  },
+  {
+    title: "Rigueur Opérationnelle",
+    description:
+      "Organisation du travail, documentation claire et respect des bonnes pratiques de développement (Git, architecture propre, CI/CD, déploiement d’APIs et modèles IA).",
+  },
+];
+
+const alternanceInterests = [
+  "Machine Learning et Deep Learning",
+  "LLMs et agents IA",
+  "Integration d'APIs IA et systemes intelligents",
+  "Deploiement de modeles via APIs et architectures microservices",
+];
+
+const alternanceProjects = [
+  "Développement de modèles ML pour la prédiction et l’analyse de données.",
+  "Fine-tuning et utilisation de LLMs pour la génération et l’analyse de texte.",
+  "Création de solutions IA intégrées dans des applications web via APIs.",
 ];
 
 const focusAreas = [
   {
-    title: "AI Engineering",
+    title: "Machine Learning & LLMs",
     description:
-      "Fine-tuning, LLMs, Transformers, PyTorch et agents IA pour des cas d'usage operationnels.",
+      "Fine-tuning, Transformers, PyTorch, PEFT et integration de modeles IA dans des workflows applicatifs.",
   },
   {
-    title: "Data Science",
+    title: "Genie Logiciel",
     description:
-      "Conception de modeles ML interpretable et evaluables avec Scikit-learn, Pandas, Numpy et metriques claires.",
+      "Architecture microservices, conception UML, API REST/GraphQL et bonnes pratiques de qualite logicielle.",
   },
   {
-    title: "Deployment & Product",
+    title: "Data & Cloud Stack",
     description:
-      "Integration des modeles via API REST/GraphQL, travail agile, architecture microservices et vision produit.",
+      "Pandas, Numpy, PostgreSQL, MySQL, Snowflake, Docker, CI/CD et approche orientee scalabilite.",
   },
 ];
 
@@ -80,13 +117,45 @@ const experienceTimeline = [
   },
 ];
 
+const academicTimeline = [
+  {
+    period: "2023 - 2026",
+    degree: "Cycle d'ingenierie Logiciels et Systemes Intelligents",
+    school: "Faculte des Sciences et Techniques de Tanger",
+    points: [
+      "Specialisation en intelligence artificielle et architecture logicielle.",
+      "Projets appliques en NLP, data science et computer vision.",
+      "Formation orientee produit: de la modelisation au deploiement.",
+    ],
+  },
+  {
+    period: "2020 - 2023",
+    degree: "Licence en Genie Informatique",
+    school: "Faculte des Sciences et Techniques de Tanger",
+    points: [
+      "Consolidation des fondamentaux: algorithmique, programmation et structures de donnees.",
+      "Travaux pratiques en genie logiciel, web et bases de donnees.",
+      "Developpement de rigueur technique et methodologique.",
+    ],
+  },
+  {
+    period: "2019 - 2020",
+    degree: "Baccalaureat Sciences Mathematiques A (option francais)",
+    school: "Lycee Abdelkarim Al Khattabi, Nador",
+    points: [
+      "Socle solide en mathematiques et raisonnement analytique.",
+      "Preparation a des etudes superieures en informatique et ingenierie.",
+    ],
+  },
+];
+
 const projectHighlights = [
   {
     title: "Invest Buddy",
     subtitle: "Microservices + ML financier",
     image: "/InvestBuddy.png",
     details:
-      "Modele Scikit-learn pour l'evaluation du risque de credit et la prediction de tendances financieres, expose via API REST.",
+      "Conception et implementation d'un modele Scikit-learn pour l'evaluation du risque de credit et la prediction de tendances financieres en temps reel.",
     stack: "Spring Boot, Angular, MySQL, Pandas, Numpy, Scikit-learn",
   },
   {
@@ -94,24 +163,16 @@ const projectHighlights = [
     subtitle: "Deep Learning - Computer Vision",
     image: "/work-2.png",
     details:
-      "Architecture U-Net encoder-decoder pour colorisation automatique d'images N&B en espace LAB avec skip connections.",
+      "Developpement d'un modele CNN Encoder-Decoder (U-Net) pour coloriser automatiquement des images N&B en espace LAB.",
     stack: "Python, TensorFlow, Keras, CNN, U-Net, PSNR/SSIM/MAE",
   },
   {
-    title: "AI Assessment Assistant",
-    subtitle: "LLMs + Fine-tuning",
+    title: "Generation intelligente de QCM",
+    subtitle: "LLMs appliques a l'education",
     image: "/work-4.png",
     details:
-      "Generation dynamique de contenu pedagogique et feedback intelligent en temps reel adapte au niveau de l'etudiant.",
-    stack: "Transformers, PyTorch, PEFT, PostgreSQL, Hugging Face",
-  },
-  {
-    title: "Public Service Platform",
-    subtitle: "Full Stack Engineering",
-    image: "/Fjobs.png",
-    details:
-      "Application full-stack construite de bout en bout avec modelisation UML, architecture claire et fonctionnalites metier.",
-    stack: "MongoDB, Express.js, Angular, Node.js, Agile",
+      "Implementation de modeles LLMs (Hugging Face) pour la generation dynamique de questions ouvertes et QCM adaptes au niveau de l'etudiant.",
+    stack: "LLMs, Transformers, PyTorch, PEFT, PostgreSQL",
   },
 ];
 
@@ -122,15 +183,34 @@ const competencyGroups = [
   },
   {
     title: "Frameworks",
-    items: ["Spring Boot", "Spring Cloud", "Spring Security", "Angular", "JEE", "Express.js"],
+    items: ["Angular", "Spring Boot", "JEE", "Spring Cloud", "Spring Security", "Express.js"],
   },
   {
-    title: "Data & AI",
-    items: ["Scikit-learn", "PyTorch", "Transformers", "Fine-tuning", "Pandas", "Numpy", "MLOps"],
+    title: "Bases de donnees",
+    items: ["MongoDB", "PostgreSQL", "MySQL", "Oracle", "Redis"],
   },
   {
-    title: "Databases & Cloud",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Oracle", "Redis", "Snowflake", "AWS"],
+    title: "Outils & IA",
+    items: [
+      "Architecture microservices",
+      "Git",
+      "CI/CD",
+      "Docker",
+      "Maven",
+      "Power BI",
+      "Pandas",
+      "Numpy",
+      "LLMs",
+      "Fine-tuning",
+      "Transformers",
+      "PyTorch",
+      "PEFT",
+      "Snowflake",
+      "Scrum",
+      "MLOps",
+      "API REST/GraphQL",
+      "AWS",
+    ],
   },
 ];
 
@@ -177,6 +257,15 @@ const itemVariants = {
   },
 };
 
+const getCompanyBadge = (company) =>
+  company
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+
 export default function Home() {
   const [result, setResult] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -213,15 +302,15 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="portfolio-shell min-h-screen text-[color:var(--ink)]">
+    <main id="top" className="portfolio-shell creative-shell min-h-screen text-[color:var(--ink)]">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-16 top-24 h-72 w-72 rounded-full bg-[#f4c275]/45 blur-3xl" />
-        <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#0f766e]/20 blur-3xl" />
-        <div className="absolute bottom-12 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[#fef3db]/60 blur-3xl" />
+        <div className="absolute -left-16 top-24 h-72 w-72 rounded-full bg-[#ff8e5f]/35 blur-3xl" />
+        <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#11b5ae]/24 blur-3xl" />
+        <div className="absolute bottom-12 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[#ffd87b]/35 blur-3xl" />
       </div>
 
       <header className="fixed top-4 z-40 w-full">
-        <div className="mx-auto flex w-[min(1120px,92%)] items-center justify-between rounded-full px-5 py-3 glass-card">
+        <div className="creative-nav mx-auto flex w-[min(1120px,92%)] items-center justify-between rounded-full px-5 py-3 glass-card">
           <a href="#top" className="font-display text-lg font-semibold tracking-wide">
             Badr Benabdellah
           </a>
@@ -245,55 +334,48 @@ export default function Home() {
       <section className="mx-auto grid w-[min(1120px,92%)] gap-14 pb-20 pt-36 lg:grid-cols-[1.15fr_0.85fr] lg:pt-44">
         <motion.div initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={sectionTransition}>
           <span className="chip inline-flex rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--muted)]">
-            Recherche d'alternance - AI Engineer / Data Scientist Junior
+            À la recherche d'un Alternance - Data Scientist & ingénieur IA
           </span>
 
-          <h1 className="mt-6 font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">
-            Etudiant ingenieur en IA
-            <br />
-            orienté AI Engineering & Data Science
+          <h1 className="hero-title mt-6 text-4xl sm:text-5xl lg:text-6xl">
+            Étudiant ingénieur en <span className="hero-emphasis">IA</span> qui transforme des idées en
+            produits concrets
           </h1>
 
           <p className="mt-6 max-w-2xl text-base text-[color:var(--muted)] sm:text-lg">
-            En derniere annee du cycle ingenieur Logiciels et Systemes Intelligents, je recherche une
-            alternance pour contribuer sur des produits IA concrets: modeles, data pipelines, APIs et
-            industrialisation.
+            Étudiant en dernière année du cycle d'ingénieur en Logiciels et Systèmes Intelligents, je
+            suis passionné par le Machine Learning, le Deep Learning et les LLMs, avec pour objectif de
+            contribuer à des projets d'IA à fort impact.
           </p>
+
+          <motion.ul variants={listVariants} initial="hidden" animate="show" className="mt-6 flex flex-wrap gap-3">
+            {alternanceSignals.map((signal) => (
+              <motion.li key={signal} variants={itemVariants} className="signal-chip rounded-full px-4 py-2 text-xs font-semibold">
+                {signal}
+              </motion.li>
+            ))}
+          </motion.ul>
 
           <div className="mt-9 flex flex-wrap gap-4">
             <a href="#contact" className="rounded-full px-7 py-3 text-sm font-semibold primary-btn">
-              Planifier un echange
+              Planifier un échange Alternance
             </a>
             <a
               href="/Resume_Badr_Benabdellah.pdf"
               download
               className="secondary-btn rounded-full px-7 py-3 text-sm font-semibold"
             >
-              CV (version portfolio)
+              Recevoir mon CV
             </a>
           </div>
 
-          <motion.div
-            variants={listVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.35 }}
-            className="mt-10 grid gap-4 sm:grid-cols-3"
-          >
-            {proofPoints.map((point) => (
-              <motion.article key={point.label} variants={itemVariants} className="glass-card rounded-2xl p-4">
-                <p className="font-display text-2xl">{point.value}</p>
-                <p className="mt-1 text-sm text-[color:var(--muted)]">{point.label}</p>
-              </motion.article>
-            ))}
-          </motion.div>
         </motion.div>
 
         <motion.aside
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...sectionTransition, delay: 0.15 }}
-          className="glass-card rounded-[2rem] p-7"
+          className="profile-panel glass-card h-fit rounded-[2rem] p-7 lg:self-start"
         >
           <div className="relative mx-auto h-72 w-64 overflow-hidden border border-white/75 [border-radius:42%_58%_52%_48%/48%_44%_56%_52%]">
             <Image src={assets.profile_img} alt="Portrait de Badr Benabdellah" fill priority className="object-cover" />
@@ -302,16 +384,102 @@ export default function Home() {
           <div className="mt-6 space-y-3">
             <div className="rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
               <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">Cible</p>
-              <p className="mt-1 text-sm font-semibold">Alternance AI Engineer / Junior Data Scientist</p>
+              <p className="mt-1 text-sm font-semibold">Stage PFE Ingenieur IA / Data</p>
             </div>
             <div className="rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
               <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">Contact rapide</p>
               <p className="mt-1 text-sm font-semibold">benabdellahbadr3@gmail.com | 0634562555</p>
             </div>
           </div>
+
         </motion.aside>
+
+        <motion.div
+          variants={listVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.35 }}
+          className="grid gap-4 sm:grid-cols-3 lg:col-span-2"
+        >
+          {proofPoints.map((point) => (
+            <motion.article key={point.label} variants={itemVariants} className="proof-card glass-card rounded-2xl p-5">
+              <p className="font-display text-3xl leading-tight">{point.value}</p>
+              <p className="mt-2 text-base text-[color:var(--muted)]">{point.label}</p>
+            </motion.article>
+          ))}
+        </motion.div>
       </section>
 
+
+      <section className="mx-auto w-[min(1120px,92%)] pb-8">
+        <motion.article
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={sectionTransition}
+          className="creative-banner rounded-[2rem] p-7 sm:p-9"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--muted)]">
+                Positionnement CV
+              </p>
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl">Profil alternance - IA appliquee & Engineering</h2>
+              <p className="mt-3 text-sm text-[color:var(--muted)] sm:text-base">
+                Étudiant en dernière année du cycle d'ingénieur en Logiciels et Systèmes Intelligents, je
+                recherche une alternance pour l'année universitaire 2026/2027 afin de contribuer à des
+                projets concrets en Intelligence Artificielle, Data et développement de solutions IA
+                déployables.
+              </p>
+            </div>
+            <a href="#contact" className="secondary-btn rounded-full px-6 py-3 text-sm font-semibold">
+              Proposer une alternance
+            </a>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
+            <article className="glass-card rounded-2xl p-5 sm:p-6">
+                <p className="text-sm font-semibold text-[color:var(--muted)] sm:text-base">
+                Mes axes de spécialisation prioritaires sont les suivants :
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {alternanceInterests.map((item) => (
+                  <span key={item} className="signal-chip inline-flex rounded-full px-3 py-1.5 text-xs font-semibold sm:text-sm">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-sm text-[color:var(--muted)] sm:text-base">
+                Mon objectif est de concevoir, entraîner et déployer des systèmes IA utiles en production, en combinant modélisation, software engineering et MLOps.
+              </p>
+            </article>
+
+            <article className="glass-card rounded-2xl p-5 sm:p-6">
+              <p className="text-sm font-semibold text-[color:var(--muted)] sm:text-base">
+                Parmi mes expériences récentes, j’ai notamment mené des projets couvrant :
+              </p>
+              <ol className="mt-4 space-y-3">
+                {alternanceProjects.map((item, index) => (
+                  <li key={item} className="rounded-xl border border-[#d2c8b8] bg-white/70 p-3 text-sm text-[color:var(--muted)]">
+                    <span className="mr-2 font-display text-base text-[#1f2230]"></span>
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          </div>
+
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
+            {collaborationPromise.map((promise, index) => (
+              <article key={promise.title} className="promise-card rounded-2xl p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"></p>
+                <h3 className="mt-2 font-semibold">{promise.title}</h3>
+                <p className="mt-2 text-sm text-[color:var(--muted)]">{promise.description}</p>
+              </article>
+            ))}
+          </div>
+        </motion.article>
+      </section>
       <motion.section
         id="profile"
         initial={{ opacity: 0, y: 35 }}
@@ -323,13 +491,14 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="glass-card rounded-3xl p-8">
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Profil</p>
-            <h2 className="mt-3 font-display text-3xl">Profil cible alternance IA</h2>
+            <h2 className="mt-3 font-display text-3xl">Profil CV - Ingenieur IA</h2>
             <p className="mt-4 text-[color:var(--muted)]">
-              Je combine base solide en genie logiciel et specialisation IA/Data pour contribuer sur des
-              cas d'usage applicatifs: NLP, Computer Vision, predictive analytics et integration produit.
+              Etudiant en derniere annee du cycle d'ingenieur, je m'interesse particulierement au
+              Machine Learning, au Deep Learning et aux LLMs, avec la volonte d'apporter des solutions
+              innovantes et robustes sur des produits reels.
             </p>
             <div className="mt-5 rounded-2xl border border-[#d2c8b8] bg-white/70 p-4 text-sm text-[color:var(--muted)]">
-              Formation: Cycle d'ingenierie Logiciels et Systemes Intelligents (FST Tanger), 2023-2026.
+              Formation: Cycle d'ingenierie (2023-2026), Licence en Genie Informatique (2020-2023), Baccalaureat Maths A (2019-2020).
             </div>
           </article>
 
@@ -352,6 +521,88 @@ export default function Home() {
       </motion.section>
 
       <motion.section
+        id="education"
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={sectionTransition}
+        className="section-anchor mx-auto w-[min(1120px,92%)] py-14"
+      >
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Formation</p>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Parcours academique</h2>
+          </div>
+        </div>
+
+        <motion.div
+          variants={listVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="experience-timeline"
+        >
+          {academicTimeline.map((item, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
+              <motion.article key={item.degree} variants={itemVariants} className="timeline-row">
+                {isLeft ? (
+                  <>
+                    <div className="timeline-card-col">
+                      <article className="timeline-card rounded-3xl p-6">
+                        <h3 className="font-display text-3xl leading-tight text-white">{item.degree}</h3>
+                        <p className="mt-1 text-base font-semibold text-white/75">{item.school}</p>
+
+                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div className="timeline-center timeline-center-right">
+                      <span className="timeline-dot">{getCompanyBadge(item.school)}</span>
+                      <p className="timeline-period timeline-period-right">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-spacer" />
+                  </>
+                ) : (
+                  <>
+                    <div className="timeline-spacer" />
+
+                    <div className="timeline-center timeline-center-left">
+                      <span className="timeline-dot">{getCompanyBadge(item.school)}</span>
+                      <p className="timeline-period timeline-period-left">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-card-col">
+                      <article className="timeline-card rounded-3xl p-6">
+                        <h3 className="font-display text-3xl leading-tight text-white">{item.degree}</h3>
+                        <p className="mt-1 text-base font-semibold text-white/75">{item.school}</p>
+
+                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+                  </>
+                )}
+              </motion.article>
+            );
+          })}
+        </motion.div>
+      </motion.section>
+
+      <motion.section
         id="experience"
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -371,26 +622,65 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-5"
+          className="experience-timeline"
         >
-          {experienceTimeline.map((item) => (
-            <motion.article key={item.role} variants={itemVariants} className="glass-card rounded-3xl p-6">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">{item.period}</p>
-                  <h3 className="mt-2 font-display text-2xl">{item.role}</h3>
-                  <p className="text-sm font-semibold text-[color:var(--muted)]">{item.company}</p>
-                </div>
-              </div>
-              <ul className="mt-4 grid gap-2 text-sm text-[color:var(--muted)]">
-                {item.points.map((point) => (
-                  <li key={point} className="rounded-xl border border-[#d6ccbd] bg-white/65 px-3 py-2">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </motion.article>
-          ))}
+          {experienceTimeline.map((item, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
+              <motion.article key={item.role} variants={itemVariants} className="timeline-row">
+                {isLeft ? (
+                  <>
+                    <div className="timeline-card-col">
+                      <article className="timeline-card rounded-3xl p-6">
+                        <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
+                        <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
+
+                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div className="timeline-center timeline-center-right">
+                      <span className="timeline-dot">{getCompanyBadge(item.company)}</span>
+                      <p className="timeline-period timeline-period-right">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-spacer" />
+                  </>
+                ) : (
+                  <>
+                    <div className="timeline-spacer" />
+
+                    <div className="timeline-center timeline-center-left">
+                      <span className="timeline-dot">{getCompanyBadge(item.company)}</span>
+                      <p className="timeline-period timeline-period-left">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-card-col">
+                      <article className="timeline-card rounded-3xl p-6">
+                        <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
+                        <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
+
+                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+                  </>
+                )}
+              </motion.article>
+            );
+          })}
         </motion.div>
       </motion.section>
 
@@ -398,7 +688,7 @@ export default function Home() {
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Portfolio</p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Projets IA & Data pertinents</h2>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Projets cles du CV</h2>
           </div>
           <a
             href="https://github.com/badrbenabdellah"
@@ -406,7 +696,7 @@ export default function Home() {
             rel="noreferrer"
             className="secondary-btn rounded-full px-6 py-2 text-sm font-semibold"
           >
-            Voir mon GitHub
+            Voir les repos GitHub
           </a>
         </div>
 
@@ -447,7 +737,7 @@ export default function Home() {
           className="glass-card rounded-3xl p-7"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Competences CV</p>
-          <h2 className="mt-2 font-display text-3xl">Socle technique IA & Data</h2>
+          <h2 className="mt-2 font-display text-3xl">Competences techniques du CV</h2>
 
           <div className="mt-6 grid gap-4">
             {competencyGroups.map((group) => (
@@ -479,7 +769,7 @@ export default function Home() {
           </ul>
 
           <div className="mt-6 rounded-2xl border border-[#d2c8b8] bg-white/72 p-4 text-sm text-[color:var(--muted)]">
-            Soft skills: esprit d'equipe, communication claire, gestion du temps, autonomie, curiosite technique.
+            Soft skills: esprit d'equipe, sens de l'analyse, gestion du temps, autonomie, prise d'initiative.
           </div>
         </motion.article>
       </section>
@@ -494,10 +784,10 @@ export default function Home() {
       >
         <article className="glass-card rounded-3xl p-7">
           <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Contact direct</p>
-          <h2 className="mt-2 font-display text-3xl">Parlons de votre alternance</h2>
+          <h2 className="mt-2 font-display text-3xl">Parlons de votre sujet PFE</h2>
           <p className="mt-4 text-sm text-[color:var(--muted)]">
-            Je suis disponible pour un premier echange sur vos besoins, vos enjeux techniques et la
-            valeur que je peux apporter rapidement a votre equipe.
+            Je suis disponible pour un premier echange sur votre sujet de stage PFE, vos enjeux
+            techniques et la valeur que je peux apporter a votre equipe.
           </p>
 
           <div className="mt-6 rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
@@ -526,7 +816,7 @@ export default function Home() {
         <article className="glass-card rounded-3xl p-7">
           <h3 className="font-display text-3xl">Envoyer un message</h3>
           <p className="mt-2 text-sm text-[color:var(--muted)]">
-            Decrivez votre offre d'alternance IA/Data et votre contexte technique.
+            Decrivez votre sujet ou votre offre de stage PFE IA/Data.
           </p>
 
           <form onSubmit={onSubmit} className="mt-6 space-y-4">
@@ -560,7 +850,7 @@ export default function Home() {
               disabled={isSending}
               className="primary-btn rounded-full px-7 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {isSending ? "Envoi..." : "Envoyer ma candidature alternance"}
+              {isSending ? "Envoi..." : "Envoyer votre offre de stage PFE"}
             </button>
 
             {result ? <p className="text-sm text-[color:var(--muted)]">{result}</p> : null}
@@ -570,7 +860,7 @@ export default function Home() {
 
       <footer className="border-t border-[#cec3b2] py-6">
         <div className="mx-auto flex w-[min(1120px,92%)] flex-wrap items-center justify-between gap-3 text-sm text-[color:var(--muted)]">
-          <p>{`© ${currentYear} Badr Benabdellah. Tous droits reserves.`}</p>
+          <p>{`(c) ${currentYear} Badr Benabdellah. Tous droits reserves.`}</p>
           <div className="flex gap-4">
             <a href="/Resume_Badr_Benabdellah.pdf" download className="transition hover:text-[color:var(--ink)]">
               CV PDF

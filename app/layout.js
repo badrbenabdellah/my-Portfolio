@@ -14,9 +14,14 @@ const syne = Syne({
 });
 
 export const metadata = {
-  title: "Badr Benabdellah",
+  title: "Portfolio - Badr Benabdellah",
   description:
     "Portfolio de Badr Benabdellah, etudiant ingenieur en Logiciels et Systemes Intelligents, a la recherche d'un stage PFE en IA.",
+  icons: {
+    icon: "/blank-favicon.svg",
+    shortcut: "/blank-favicon.svg",
+    apple: "/blank-favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

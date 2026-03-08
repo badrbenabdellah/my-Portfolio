@@ -7,8 +7,9 @@ import { assets, toolsData } from "@/assets/assets";
 
 const navItems = [
   { label: "Profil", href: "#profile" },
-  { label: "Parcours", href: "#education" },
   { label: "Experience", href: "#experience" },
+  { label: "Parcours", href: "#education" },
+  { label: "Activites", href: "#activities" },
   { label: "Projets IA", href: "#projects" },
   { label: "Competences", href: "#skills" },
   { label: "Contact", href: "#contact" },
@@ -96,9 +97,21 @@ const stackNames = [
 
 const experienceTimeline = [
   {
+    period: "Date a preciser",
+    role: "Stagiaire IA",
+    company: "Zenger News",
+    logo: "/zengernews_logo.jpeg",
+    points: [
+      "Conception et integration de fonctionnalites IA pour ameliorer l'analyse et le traitement de contenus.",
+      "Preparation et exploitation de donnees pour entrainement, evaluation et amelioration continue des modeles.",
+      "Collaboration avec l'equipe produit pour transformer les besoins metiers en solutions IA deployables.",
+    ],
+  },
+  {
     period: "Juillet 2025 - Septembre 2025",
     role: "Stagiaire IA Engineering",
     company: "Dinomite Studios",
+    logo: "/Logo_Dinomite_Studios.jpeg",
     points: [
       "Implementation de solutions LLM (Hugging Face) pour la generation adaptee de QCM et questions ouvertes.",
       "Conception d'agents IA pour correction grammaticale, orthographique et analyse de coherence semantique.",
@@ -109,6 +122,7 @@ const experienceTimeline = [
     period: "Avril 2023 - Juillet 2023",
     role: "Stagiaire Ingenieur Logiciel",
     company: "Smart Automation Technologies",
+    logo: "/Logo_Smart_Automation_Technologies.jpeg",
     points: [
       "Developpement complet d'une application web publique en stack MEAN (MongoDB, Express, Angular, Node.js).",
       "Modelisation UML (cas d'usage, classes, sequences) et structuration d'architecture pour un delivery robuste.",
@@ -122,6 +136,7 @@ const academicTimeline = [
     period: "2023 - 2026",
     degree: "Cycle d'ingenierie Logiciels et Systemes Intelligents",
     school: "Faculte des Sciences et Techniques de Tanger",
+    logo: "/logo%20fst.png",
     points: [
       "Specialisation en intelligence artificielle et architecture logicielle.",
       "Projets appliques en NLP, data science et computer vision.",
@@ -129,9 +144,10 @@ const academicTimeline = [
     ],
   },
   {
-    period: "2020 - 2023",
+    period: "2022 - 2023",
     degree: "Licence en Genie Informatique",
     school: "Faculte des Sciences et Techniques de Tanger",
+    logo: "/logo%20fst.png",
     points: [
       "Consolidation des fondamentaux: algorithmique, programmation et structures de donnees.",
       "Travaux pratiques en genie logiciel, web et bases de donnees.",
@@ -139,13 +155,60 @@ const academicTimeline = [
     ],
   },
   {
+    period: "2020 - 2022",
+    degree: "DEUST MIPC",
+    school: "Faculte des Sciences et Techniques de Tanger",
+    logo: "/logo%20fst.png",
+    points: [
+      "Formation scientifique pluridisciplinaire en mathematiques, informatique, physique et chimie.",
+      "Renforcement des bases analytiques, algorithmique et methodes de resolution de problemes.",
+      "Preparation academique solide pour la poursuite en Genie Informatique.",
+    ],
+  },
+  {
     period: "2019 - 2020",
     degree: "Baccalaureat Sciences Mathematiques A (option francais)",
     school: "Lycee Abdelkarim Al Khattabi, Nador",
+    logo: null,
     points: [
       "Socle solide en mathematiques et raisonnement analytique.",
       "Preparation a des etudes superieures en informatique et ingenierie.",
     ],
+  },
+];
+
+const extracurricularActivities = [
+  {
+    category: "Hackathon",
+    title: "1er prix - Hackathon #1",
+    period: "Date a preciser",
+    description:
+      "Conception d'une solution innovante en equipe, du cadrage du probleme a la demonstration finale devant le jury.",
+    highlight: "Victoire 1/3",
+  },
+  {
+    category: "Hackathon",
+    title: "1er prix - Hackathon #2",
+    period: "Date a preciser",
+    description:
+      "Prototypage rapide d'une application orientee impact, avec implementation technique et pitch final sous contrainte de temps.",
+    highlight: "Victoire 2/3",
+  },
+  {
+    category: "Hackathon",
+    title: "1er prix - Hackathon #3",
+    period: "Date a preciser",
+    description:
+      "Pilotage de l'execution technique de l'equipe et optimisation de la solution pour repondre aux criteres du challenge.",
+    highlight: "Victoire 3/3",
+  },
+  {
+    category: "Leadership",
+    title: "President du club IT GEEKS",
+    period: "Mandat a preciser",
+    description:
+      "Animation du club, organisation d'activites techniques et coordination des membres autour de projets, ateliers et evenements.",
+    highlight: "Responsabilite associative",
   },
 ];
 
@@ -403,8 +466,8 @@ export default function Home() {
         >
           {proofPoints.map((point) => (
             <motion.article key={point.label} variants={itemVariants} className="proof-card glass-card rounded-2xl p-5">
-              <p className="font-display text-3xl leading-tight">{point.value}</p>
-              <p className="mt-2 text-base text-[color:var(--muted)]">{point.label}</p>
+              <p className="proof-value">{point.value}</p>
+              <p className="proof-label mt-2">{point.label}</p>
             </motion.article>
           ))}
         </motion.div>
@@ -498,7 +561,7 @@ export default function Home() {
               innovantes et robustes sur des produits reels.
             </p>
             <div className="mt-5 rounded-2xl border border-[#d2c8b8] bg-white/70 p-4 text-sm text-[color:var(--muted)]">
-              Formation: Cycle d'ingenierie (2023-2026), Licence en Genie Informatique (2020-2023), Baccalaureat Maths A (2019-2020).
+              Formation: Cycle d'ingenierie (2023-2026), Licence en Genie Informatique (2022-2023), DEUST MIPC (2020-2022), Baccalaureat Maths A (2019-2020).
             </div>
           </article>
 
@@ -518,88 +581,6 @@ export default function Home() {
             ))}
           </motion.div>
         </div>
-      </motion.section>
-
-      <motion.section
-        id="education"
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={sectionTransition}
-        className="section-anchor mx-auto w-[min(1120px,92%)] py-14"
-      >
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Formation</p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Parcours academique</h2>
-          </div>
-        </div>
-
-        <motion.div
-          variants={listVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="experience-timeline"
-        >
-          {academicTimeline.map((item, index) => {
-            const isLeft = index % 2 === 0;
-
-            return (
-              <motion.article key={item.degree} variants={itemVariants} className="timeline-row">
-                {isLeft ? (
-                  <>
-                    <div className="timeline-card-col">
-                      <article className="timeline-card rounded-3xl p-6">
-                        <h3 className="font-display text-3xl leading-tight text-white">{item.degree}</h3>
-                        <p className="mt-1 text-base font-semibold text-white/75">{item.school}</p>
-
-                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
-                          {item.points.map((point) => (
-                            <li key={point} className="timeline-point">
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </article>
-                    </div>
-
-                    <div className="timeline-center timeline-center-right">
-                      <span className="timeline-dot">{getCompanyBadge(item.school)}</span>
-                      <p className="timeline-period timeline-period-right">{item.period}</p>
-                    </div>
-
-                    <div className="timeline-spacer" />
-                  </>
-                ) : (
-                  <>
-                    <div className="timeline-spacer" />
-
-                    <div className="timeline-center timeline-center-left">
-                      <span className="timeline-dot">{getCompanyBadge(item.school)}</span>
-                      <p className="timeline-period timeline-period-left">{item.period}</p>
-                    </div>
-
-                    <div className="timeline-card-col">
-                      <article className="timeline-card rounded-3xl p-6">
-                        <h3 className="font-display text-3xl leading-tight text-white">{item.degree}</h3>
-                        <p className="mt-1 text-base font-semibold text-white/75">{item.school}</p>
-
-                        <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
-                          {item.points.map((point) => (
-                            <li key={point} className="timeline-point">
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </article>
-                    </div>
-                  </>
-                )}
-              </motion.article>
-            );
-          })}
-        </motion.div>
       </motion.section>
 
       <motion.section
@@ -632,7 +613,7 @@ export default function Home() {
                 {isLeft ? (
                   <>
                     <div className="timeline-card-col">
-                      <article className="timeline-card rounded-3xl p-6">
+                      <article className="timeline-card timeline-card-experience rounded-3xl p-6">
                         <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
                         <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
 
@@ -647,7 +628,19 @@ export default function Home() {
                     </div>
 
                     <div className="timeline-center timeline-center-right">
-                      <span className="timeline-dot">{getCompanyBadge(item.company)}</span>
+                      <span className="timeline-dot">
+                        {item.logo ? (
+                          <Image
+                            src={item.logo}
+                            alt={`Logo ${item.company}`}
+                            fill
+                            sizes="72px"
+                            className="timeline-dot-logo"
+                          />
+                        ) : (
+                          <span className="timeline-dot-fallback">{getCompanyBadge(item.company)}</span>
+                        )}
+                      </span>
                       <p className="timeline-period timeline-period-right">{item.period}</p>
                     </div>
 
@@ -658,12 +651,24 @@ export default function Home() {
                     <div className="timeline-spacer" />
 
                     <div className="timeline-center timeline-center-left">
-                      <span className="timeline-dot">{getCompanyBadge(item.company)}</span>
+                      <span className="timeline-dot">
+                        {item.logo ? (
+                          <Image
+                            src={item.logo}
+                            alt={`Logo ${item.company}`}
+                            fill
+                            sizes="72px"
+                            className="timeline-dot-logo"
+                          />
+                        ) : (
+                          <span className="timeline-dot-fallback">{getCompanyBadge(item.company)}</span>
+                        )}
+                      </span>
                       <p className="timeline-period timeline-period-left">{item.period}</p>
                     </div>
 
                     <div className="timeline-card-col">
-                      <article className="timeline-card rounded-3xl p-6">
+                      <article className="timeline-card timeline-card-experience rounded-3xl p-6">
                         <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
                         <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
 
@@ -683,6 +688,143 @@ export default function Home() {
           })}
         </motion.div>
       </motion.section>
+
+      <motion.section
+        id="education"
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={sectionTransition}
+        className="section-anchor mx-auto w-[min(1120px,92%)] py-14"
+      >
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Formation</p>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Parcours academique</h2>
+          </div>
+        </div>
+
+        <motion.div
+          variants={listVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="experience-timeline"
+        >
+          {academicTimeline.map((item, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
+              <motion.article key={item.degree} variants={itemVariants} className="timeline-row">
+                {isLeft ? (
+                  <>
+                    <div className="timeline-card-col">
+                      <article className="timeline-card timeline-card-academic rounded-3xl p-6">
+                        <h3 className="timeline-degree">{item.degree}</h3>
+                        <p className="timeline-school">{item.school}</p>
+
+                        <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div className="timeline-center timeline-center-right">
+                      <span className="timeline-dot timeline-dot-academic">
+                        {item.logo ? (
+                          <Image
+                            src={item.logo}
+                            alt={`Logo ${item.school}`}
+                            fill
+                            sizes="72px"
+                            className="timeline-dot-logo"
+                          />
+                        ) : (
+                          <span className="timeline-dot-fallback">{getCompanyBadge(item.school)}</span>
+                        )}
+                      </span>
+                      <p className="timeline-period timeline-period-right">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-spacer" />
+                  </>
+                ) : (
+                  <>
+                    <div className="timeline-spacer" />
+
+                    <div className="timeline-center timeline-center-left">
+                      <span className="timeline-dot timeline-dot-academic">
+                        {item.logo ? (
+                          <Image
+                            src={item.logo}
+                            alt={`Logo ${item.school}`}
+                            fill
+                            sizes="72px"
+                            className="timeline-dot-logo"
+                          />
+                        ) : (
+                          <span className="timeline-dot-fallback">{getCompanyBadge(item.school)}</span>
+                        )}
+                      </span>
+                      <p className="timeline-period timeline-period-left">{item.period}</p>
+                    </div>
+
+                    <div className="timeline-card-col">
+                      <article className="timeline-card timeline-card-academic rounded-3xl p-6">
+                        <h3 className="timeline-degree">{item.degree}</h3>
+                        <p className="timeline-school">{item.school}</p>
+
+                        <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">
+                          {item.points.map((point) => (
+                            <li key={point} className="timeline-point">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+                  </>
+                )}
+              </motion.article>
+            );
+          })}
+        </motion.div>
+      </motion.section>
+
+      <section id="activities" className="section-anchor mx-auto w-[min(1120px,92%)] py-14">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Engagement</p>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Activites parascolaires</h2>
+          </div>
+        </div>
+
+        <motion.div
+          variants={listVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid gap-5 md:grid-cols-2"
+        >
+          {extracurricularActivities.map((activity) => (
+            <motion.article key={activity.title} variants={itemVariants} className="glass-card rounded-3xl p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                {activity.category}
+              </p>
+              <h3 className="mt-2 font-display text-2xl leading-tight">{activity.title}</h3>
+              <p className="mt-1 text-sm font-semibold text-[color:var(--muted)]">{activity.period}</p>
+              <p className="mt-4 text-sm text-[color:var(--muted)]">{activity.description}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                {activity.highlight}
+              </p>
+            </motion.article>
+          ))}
+        </motion.div>
+      </section>
 
       <section id="projects" className="section-anchor mx-auto w-[min(1120px,92%)] py-14">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">

@@ -153,6 +153,26 @@ body::before {
   border-top: 3px solid rgba(255, 91, 61, 0.34);
 }
 
+.proof-value {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.55rem, 2vw, 1.95rem);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: #1a1e2b;
+  text-wrap: balance;
+}
+
+.proof-label {
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  line-height: 1.45;
+  letter-spacing: -0.006em;
+  font-weight: 500;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
 .profile-panel {
   background:
     linear-gradient(170deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 255, 0.78)),
@@ -214,6 +234,94 @@ body::before {
   box-shadow: 0 20px 36px rgba(12, 12, 25, 0.32);
 }
 
+.timeline-card-experience {
+  border: 1px solid rgba(126, 134, 156, 0.3);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(31, 34, 48, 0.03) 0,
+      rgba(31, 34, 48, 0.03) 2px,
+      transparent 2px,
+      transparent 16px
+    ),
+    linear-gradient(120deg, rgba(255, 239, 226, 0.95) 0%, rgba(233, 246, 243, 0.95) 100%);
+  box-shadow: 0 16px 32px rgba(31, 34, 48, 0.14);
+}
+
+.timeline-card-experience h3 {
+  color: var(--ink);
+}
+
+.timeline-card-experience p {
+  color: rgba(31, 34, 48, 0.75);
+}
+
+.timeline-card-experience .timeline-point {
+  color: rgba(31, 34, 48, 0.86);
+}
+
+.timeline-card-experience .timeline-point::before {
+  background: var(--accent-alt);
+}
+
+.timeline-card-academic {
+  border: 1px solid rgba(126, 134, 156, 0.3);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(31, 34, 48, 0.03) 0,
+      rgba(31, 34, 48, 0.03) 2px,
+      transparent 2px,
+      transparent 16px
+    ),
+    linear-gradient(120deg, rgba(255, 239, 226, 0.95) 0%, rgba(233, 246, 243, 0.95) 100%);
+  box-shadow: 0 16px 32px rgba(31, 34, 48, 0.14);
+}
+
+.timeline-card-academic .timeline-degree {
+  color: var(--ink);
+}
+
+.timeline-card-academic .timeline-school {
+  color: rgba(31, 34, 48, 0.75);
+}
+
+.timeline-card-academic .timeline-points-academic .timeline-point {
+  color: rgba(31, 34, 48, 0.86);
+}
+
+.timeline-card-academic .timeline-point::before {
+  background: var(--accent-alt);
+}
+
+.timeline-degree {
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(1.55rem, 1.95vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  font-weight: 700;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+.timeline-school {
+  margin-top: 0.35rem;
+  font-family: var(--font-display), serif;
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  line-height: 1.32;
+  letter-spacing: -0.004em;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.timeline-points-academic .timeline-point {
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(0.84rem, 0.86vw, 0.94rem);
+  line-height: 1.52;
+  letter-spacing: -0.004em;
+  color: rgba(255, 255, 255, 0.88);
+}
+
 .timeline-point {
   position: relative;
   padding-left: 1.2rem;
@@ -239,6 +347,8 @@ body::before {
 }
 
 .timeline-dot {
+  position: relative;
+  overflow: hidden;
   width: 72px;
   height: 72px;
   border-radius: 9999px;
@@ -254,14 +364,31 @@ body::before {
   box-shadow: 0 12px 24px rgba(24, 42, 99, 0.18);
 }
 
+.timeline-dot-logo {
+  object-fit: cover;
+}
+
+.timeline-dot-academic {
+  background: linear-gradient(180deg, #f9fbff 0%, #eaf0ff 100%);
+}
+
+.timeline-dot-fallback {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #182a63;
+}
+
 .timeline-period {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
   white-space: nowrap;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: rgba(31, 34, 48, 0.72);
 }
 

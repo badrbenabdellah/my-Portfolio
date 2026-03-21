@@ -52,26 +52,26 @@ const alternanceInterests = [
 ];
 
 const alternanceProjects = [
-  "Développement de modèles ML pour la prédiction et l’analyse de données.",
-  "Fine-tuning et utilisation de LLMs pour la génération et l’analyse de texte.",
-  "Création de solutions IA intégrées dans des applications web via APIs.",
+  "Conception et déploiement de modèles de Machine Learning pour la prédiction et l’analyse de données.",
+  "Développement et fine-tuning de LLMs pour des applications NLP.",
+  "Intégration de solutions IA dans des applications web via APIs (FastAPI/Flask) et architectures scalables.",
 ];
 
 const focusAreas = [
   {
     title: "Machine Learning & LLMs",
     description:
-      "Fine-tuning, Transformers, PyTorch, PEFT et integration de modeles IA dans des workflows applicatifs.",
-  },
-  {
-    title: "Genie Logiciel",
-    description:
-      "Architecture microservices, conception UML, API REST/GraphQL et bonnes pratiques de qualite logicielle.",
+      "Fine-tuning, Transformers, PyTorch, PEFT et intégration de modèles IA dans des workflows applicatifs.",
   },
   {
     title: "Data & Cloud Stack",
     description:
-      "Pandas, Numpy, PostgreSQL, MySQL, Snowflake, Docker, CI/CD et approche orientee scalabilite.",
+      "Pandas, NumPy, PostgreSQL, MySQL, Snowflake, Docker, CI/CD et approche orientée scalabilité.",
+  },
+  {
+    title: "Génie logiciel",
+    description:
+      "Architecture microservices, conception UML, API REST/GraphQL et bonnes pratiques de qualité logicielle.",
   },
 ];
 
@@ -97,36 +97,35 @@ const stackNames = [
 
 const experienceTimeline = [
   {
-    period: "Date a preciser",
-    role: "Stagiaire IA",
+    period: "Février 2026 - en cours",
+    role: "Stagiaire IA Engineering",
     company: "Zenger News",
     logo: "/zengernews_logo.jpeg",
     points: [
-      "Conception et integration de fonctionnalites IA pour ameliorer l'analyse et le traitement de contenus.",
-      "Preparation et exploitation de donnees pour entrainement, evaluation et amelioration continue des modeles.",
-      "Collaboration avec l'equipe produit pour transformer les besoins metiers en solutions IA deployables.",
+      "Conception de scripts de scraping automatisés pour la collecte de flux d'actualités.",
+      "Implémentation d'une recherche sémantique basée sur des embeddings pour dépasser la simple recherche par mots-clés.",
+      "Intégration de Large Language Models (LLMs) pour la synthèse d'informations et le traitement du langage naturel.",
     ],
   },
   {
     period: "Juillet 2025 - Septembre 2025",
-    role: "Stagiaire IA Engineering",
+    role: "Ingénieur IA Stagiaire",
     company: "Dinomite Studios",
     logo: "/Logo_Dinomite_Studios.jpeg",
     points: [
-      "Implementation de solutions LLM (Hugging Face) pour la generation adaptee de QCM et questions ouvertes.",
-      "Conception d'agents IA pour correction grammaticale, orthographique et analyse de coherence semantique.",
-      "Travail avec PyTorch, peft, PostgreSQL et workflow agile pour livrer un feedback en temps reel.",
+      "Conception de systèmes automatisés pour la génération de questions ouvertes et QCM.",
+      "Développement d'agents IA spécialisés en analyse sémantique et correction grammaticale.",
+      "Optimisation Transformers : fine-tuning via PyTorch et Hugging Face pour accroître la qualité.",
     ],
   },
   {
     period: "Avril 2023 - Juillet 2023",
-    role: "Stagiaire Ingenieur Logiciel",
+    role: "Ingénieur Logiciel (Stage)",
     company: "Smart Automation Technologies",
     logo: "/Logo_Smart_Automation_Technologies.jpeg",
     points: [
-      "Developpement complet d'une application web publique en stack MEAN (MongoDB, Express, Angular, Node.js).",
-      "Modelisation UML (cas d'usage, classes, sequences) et structuration d'architecture pour un delivery robuste.",
-      "Collaboration en equipe agile avec suivi des besoins et iteration continue.",
+      "Modélisation & Conception : Formalisation des besoins et conception via diagrammes UML.",
+      "Développement Full-Stack : Conception et réalisation complète d'une plateforme d'appels d'offres.",
     ],
   },
 ];
@@ -134,40 +133,52 @@ const experienceTimeline = [
 const academicTimeline = [
   {
     period: "2023 - 2026",
-    degree: "Cycle d'ingenierie Logiciels et Systemes Intelligents",
-    school: "Faculte des Sciences et Techniques de Tanger",
+    degree: "Cycle d’ingénierie :",
+    degreeSubtitle: "Logiciels et Systèmes Intelligents",
+    degreeSubtitleVariant: "muted",
+    degreeSubtitleNoWrap: true,
+    school: "Faculté des Sciences et Techniques de Tanger",
     logo: "/logo%20fst.png",
     points: [
-      "Specialisation en intelligence artificielle et architecture logicielle.",
-      "Projets appliques en NLP, data science et computer vision.",
-      "Formation orientee produit: de la modelisation au deploiement.",
+      "Comprendre les enjeux des technologies de l’information.",
+      "Proposer et construire des solutions informatiques et décisionnelles compétitives et réalistes.",
+      "Intervenir sur des problématiques complexes et piloter des projets (conduite du changement).",
     ],
   },
   {
     period: "2022 - 2023",
-    degree: "Licence en Genie Informatique",
-    school: "Faculte des Sciences et Techniques de Tanger",
+    degree: "Licence en",
+    degreeSubtitle: "Génie Informatique",
+    degreeSubtitleVariant: "muted",
+    degreeSubtitleNoWrap: true,
+    school: "Faculté des Sciences et Techniques de Tanger",
     logo: "/logo%20fst.png",
     points: [
-      "Consolidation des fondamentaux: algorithmique, programmation et structures de donnees.",
-      "Travaux pratiques en genie logiciel, web et bases de donnees.",
-      "Developpement de rigueur technique et methodologique.",
+      "Concevoir des applications informatiques répondant aux besoins spécifiques des entreprises et des organisations.",
+      "Développer des solutions de qualité, robustes et maintenables (bonnes pratiques de génie logiciel).",
+      "Maintenir et faire évoluer des applications en assurant fiabilité, performance et documentation.",
     ],
   },
   {
     period: "2020 - 2022",
-    degree: "DEUST MIPC",
-    school: "Faculte des Sciences et Techniques de Tanger",
+    degree: "DEUST",
+    degreeSubtitle: "MIPC",
+    degreeSubtitleVariant: "muted",
+    degreeSubtitleNoWrap: true,
+    school: "Faculté des Sciences et Techniques de Tanger",
     logo: "/logo%20fst.png",
     points: [
-      "Formation scientifique pluridisciplinaire en mathematiques, informatique, physique et chimie.",
-      "Renforcement des bases analytiques, algorithmique et methodes de resolution de problemes.",
-      "Preparation academique solide pour la poursuite en Genie Informatique.",
+      "Suivre un tronc commun en mathématiques, informatique, physique et chimie.",
+      "Renforcer les fondamentaux en algorithmique, programmation et structures de données.",
+      "Développer des bases solides en logique, calculs mathématiques et résolution de problèmes.",
     ],
   },
   {
     period: "2019 - 2020",
-    degree: "Baccalaureat Sciences Mathematiques A (option francais)",
+    degree: "Baccalauréat",
+    degreeSubtitle: "Sciences Mathématiques A (option français)",
+    degreeSubtitleVariant: "muted-tight",
+    degreeSubtitleNoWrap: true,
     school: "Lycee Abdelkarim Al Khattabi, Nador",
     logo: null,
     points: [
@@ -401,14 +412,12 @@ export default function Home() {
           </span>
 
           <h1 className="hero-title mt-6 text-4xl sm:text-5xl lg:text-6xl">
-            Étudiant ingénieur en <span className="hero-emphasis">IA</span> qui transforme des idées en
-            produits concrets
+            Ingénieur en <span className="hero-emphasis">IA</span> qui transforme des idées en
+            produits concrets.
           </h1>
 
           <p className="mt-6 max-w-2xl text-base text-[color:var(--muted)] sm:text-lg">
-            Étudiant en dernière année du cycle d'ingénieur en Logiciels et Systèmes Intelligents, je
-            suis passionné par le Machine Learning, le Deep Learning et les LLMs, avec pour objectif de
-            contribuer à des projets d'IA à fort impact.
+            Ingénieur en Logiciels et Systèmes Intelligents, spécialisé en IA Engineering, je conçois et développe des solutions basées sur le Machine Learning, le Deep Learning et les LLMs. Passionné par la mise en production de modèles et la création de systèmes intelligents à fort impact, je m’investis dans des projets alliant performance, scalabilité et valeur métier.
           </p>
 
           <motion.ul variants={listVariants} initial="hidden" animate="show" className="mt-6 flex flex-wrap gap-3">
@@ -424,7 +433,7 @@ export default function Home() {
               Planifier un échange Alternance
             </a>
             <a
-              href="/Resume_Badr_Benabdellah.pdf"
+              href="/Badr Benabdellah CV.pdf"
               download
               className="secondary-btn rounded-full px-7 py-3 text-sm font-semibold"
             >
@@ -488,11 +497,8 @@ export default function Home() {
                 Positionnement CV
               </p>
               <h2 className="mt-3 font-display text-3xl sm:text-4xl">Profil alternance - IA appliquee & Engineering</h2>
-              <p className="mt-3 text-sm text-[color:var(--muted)] sm:text-base">
-                Étudiant en dernière année du cycle d'ingénieur en Logiciels et Systèmes Intelligents, je
-                recherche une alternance pour l'année universitaire 2026/2027 afin de contribuer à des
-                projets concrets en Intelligence Artificielle, Data et développement de solutions IA
-                déployables.
+              <p className="mt-3 text-sm text-[color:var(--muted)] sm:text-base [text-wrap:pretty]">
+                Ingénieur en Logiciels et Systèmes Intelligents, je recherche une alternance pour l’année&nbsp;universitaire 2026/2027 afin de contribuer à des projets concrets en Intelligence Artificielle, Data et développement de solutions IA déployables.
               </p>
             </div>
             <a href="#contact" className="secondary-btn rounded-full px-6 py-3 text-sm font-semibold">
@@ -522,9 +528,11 @@ export default function Home() {
                 Parmi mes expériences récentes, j’ai notamment mené des projets couvrant :
               </p>
               <ol className="mt-4 space-y-3">
-                {alternanceProjects.map((item, index) => (
-                  <li key={item} className="rounded-xl border border-[#d2c8b8] bg-white/70 p-3 text-sm text-[color:var(--muted)]">
-                    <span className="mr-2 font-display text-base text-[#1f2230]"></span>
+                {alternanceProjects.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-xl border border-[#d2c8b8] bg-white/70 p-3 text-sm text-[color:var(--muted)]"
+                  >
                     {item}
                   </li>
                 ))}
@@ -554,14 +562,15 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="glass-card rounded-3xl p-8">
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Profil</p>
-            <h2 className="mt-3 font-display text-3xl">Profil CV - Ingenieur IA</h2>
+            <h2 className="mt-3 font-display text-3xl">Profil CV - Ingénieur IA</h2>
             <p className="mt-4 text-[color:var(--muted)]">
-              Etudiant en derniere annee du cycle d'ingenieur, je m'interesse particulierement au
-              Machine Learning, au Deep Learning et aux LLMs, avec la volonte d'apporter des solutions
-              innovantes et robustes sur des produits reels.
+              Ingénieur en Logiciels et Systèmes Intelligents, je m’intéresse particulièrement au Machine Learning, au
+              Deep Learning et aux LLMs, avec la volonté d’apporter des solutions innovantes et robustes à des produits
+              réels.
             </p>
             <div className="mt-5 rounded-2xl border border-[#d2c8b8] bg-white/70 p-4 text-sm text-[color:var(--muted)]">
-              Formation: Cycle d'ingenierie (2023-2026), Licence en Genie Informatique (2022-2023), DEUST MIPC (2020-2022), Baccalaureat Maths A (2019-2020).
+              Formation : Cycle d’ingénierie (2023-2026), Licence en Génie informatique (2022-2023), DEUST MIPC
+              (2020-2022), Baccalauréat Maths A (2019-2020).
             </div>
           </article>
 
@@ -594,7 +603,7 @@ export default function Home() {
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Selection</p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Experience professionnelle</h2>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Expérience Professionnelle</h2>
           </div>
         </div>
 
@@ -700,7 +709,7 @@ export default function Home() {
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Formation</p>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Parcours academique</h2>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Parcours académique</h2>
           </div>
         </div>
 
@@ -713,6 +722,23 @@ export default function Home() {
         >
           {academicTimeline.map((item, index) => {
             const isLeft = index % 2 === 0;
+            const degreeSubtitleVariantClassName =
+              item.degreeSubtitleVariant === "muted"
+                ? "mt-2 block text-[0.75em] font-semibold leading-[1.15] tracking-tight text-[color:var(--muted)]"
+                : item.degreeSubtitleVariant === "muted-tight"
+                  ? "mt-2 block text-[0.68em] font-semibold leading-[1.15] tracking-tight text-[color:var(--muted)]"
+                  : "block";
+            const degreeSubtitleClassName = [degreeSubtitleVariantClassName, item.degreeSubtitleNoWrap ? "whitespace-nowrap" : null]
+              .filter(Boolean)
+              .join(" ");
+            const degreeNode = item.degreeSubtitle ? (
+              <>
+                <span className="block">{item.degree}</span>
+                <span className={degreeSubtitleClassName}>{item.degreeSubtitle}</span>
+              </>
+            ) : (
+              item.degree
+            );
 
             return (
               <motion.article key={item.degree} variants={itemVariants} className="timeline-row">
@@ -720,7 +746,7 @@ export default function Home() {
                   <>
                     <div className="timeline-card-col">
                       <article className="timeline-card timeline-card-academic rounded-3xl p-6">
-                        <h3 className="timeline-degree">{item.degree}</h3>
+                        <h3 className="timeline-degree">{degreeNode}</h3>
                         <p className="timeline-school">{item.school}</p>
 
                         <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">
@@ -775,7 +801,7 @@ export default function Home() {
 
                     <div className="timeline-card-col">
                       <article className="timeline-card timeline-card-academic rounded-3xl p-6">
-                        <h3 className="timeline-degree">{item.degree}</h3>
+                        <h3 className="timeline-degree">{degreeNode}</h3>
                         <p className="timeline-school">{item.school}</p>
 
                         <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">

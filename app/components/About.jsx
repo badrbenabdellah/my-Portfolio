@@ -13,7 +13,7 @@ const About = ({isDarkMode}) => {
                 <Image src={assets.profile_img} alt='user' className='w-full rounded-3xl' />
             </div>
             <div className='flex-1'>
-                <p className='mb-10 max-w-2xl font-Ovo'>
+                <p className='mb-10 font-Ovo'>
                     As a software engineer, I've spent over 2 years immersed in the world of software development. I love building software, debugging, 
                     trying new technologies, and connecting with people from the same community  - I just love my work! My expertise extends to deep learning, 
                     artificial intelligence, and machine learning, where I design and implement intelligent systems that solve complex problems. 

@@ -200,6 +200,191 @@ body::before {
   background: rgba(255, 255, 255, 0.92);
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent-alt), var(--accent), #ffb65c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-surface {
+  position: relative;
+  border-radius: 44px;
+  border: 1px solid rgba(126, 134, 156, 0.22);
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 91, 61, 0.2), transparent 58%),
+    radial-gradient(circle at 84% 18%, rgba(15, 153, 141, 0.16), transparent 58%),
+    radial-gradient(circle at 60% 120%, rgba(255, 227, 132, 0.18), transparent 56%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.26));
+  box-shadow: 0 22px 60px rgba(31, 34, 48, 0.09);
+  overflow: hidden;
+}
+
+.contact-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(31, 34, 48, 0.05) 0,
+    rgba(31, 34, 48, 0.05) 1px,
+    transparent 1px,
+    transparent 18px
+  );
+  opacity: 0.17;
+  pointer-events: none;
+}
+
+.contact-surface::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.78), transparent 58%);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.contact-card {
+  position: relative;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 255, 0.75));
+  border: 1px solid rgba(126, 134, 156, 0.24);
+  box-shadow: 0 18px 52px rgba(31, 34, 48, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.contact-chip {
+  border: 1px solid rgba(126, 134, 156, 0.32);
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(31, 34, 48, 0.72);
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.contact-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 153, 141, 0.38);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.contact-chip-active {
+  border-color: rgba(255, 91, 61, 0.42);
+  background: linear-gradient(120deg, rgba(255, 91, 61, 0.14), rgba(15, 153, 141, 0.12));
+  color: var(--ink);
+}
+
+.contact-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(126, 134, 156, 0.2);
+  background: linear-gradient(135deg, rgba(255, 91, 61, 0.05), rgba(15, 153, 141, 0.035));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.contact-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 91, 61, 0.28);
+  background: linear-gradient(135deg, rgba(255, 91, 61, 0.1), rgba(15, 153, 141, 0.07));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76), 0 16px 34px rgba(31, 34, 48, 0.08);
+}
+
+.contact-tile-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 91, 61, 0.2);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.72), rgba(255, 91, 61, 0.14));
+  color: var(--accent-strong);
+  flex-shrink: 0;
+}
+
+.contact-tile-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-tile-title {
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.contact-tile-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(31, 34, 48, 0.58);
+  line-height: 1.25;
+}
+
+.contact-tile-action {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: rgba(31, 34, 48, 0.45);
+  transition: color 0.18s ease;
+}
+
+.contact-tile:hover .contact-tile-action {
+  color: rgba(31, 34, 48, 0.72);
+}
+
+.contact-copy-btn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(126, 134, 156, 0.26);
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(31, 34, 48, 0.62);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.contact-copy-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 153, 141, 0.34);
+  background: rgba(255, 255, 255, 0.92);
+  color: rgba(31, 34, 48, 0.78);
+}
+
+.footer-pill {
+  position: relative;
+  border-radius: 36px;
+  border: 1px solid rgba(126, 134, 156, 0.22);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 91, 61, 0.16), transparent 58%),
+    radial-gradient(circle at 85% 8%, rgba(15, 153, 141, 0.13), transparent 58%),
+    linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(247, 250, 255, 0.78));
+  box-shadow: 0 18px 56px rgba(31, 34, 48, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.footer-icon {
+  border: 1px solid rgba(126, 134, 156, 0.28);
+  background: rgba(255, 255, 255, 0.75);
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.footer-icon:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 91, 61, 0.36);
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .experience-timeline {
   position: relative;
   margin-top: 2.25rem;
@@ -402,6 +587,20 @@ body::before {
   text-align: right;
 }
 
+.timeline-period-inline {
+  display: none;
+}
+
+.timeline-card-experience .timeline-period-inline,
+.timeline-card-academic .timeline-period-inline {
+  margin-top: 0.35rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(31, 34, 48, 0.62);
+}
+
 .timeline-spacer {
   min-height: 1px;
 }
@@ -454,18 +653,11 @@ body::before {
   }
 
   .timeline-period {
-    position: static;
-    transform: none;
-    white-space: normal;
-    text-align: center;
-    font-size: 0.77rem;
-    line-height: 1.35;
+    display: none;
   }
 
-  .timeline-period-right,
-  .timeline-period-left {
-    left: auto;
-    right: auto;
+  .timeline-period-inline {
+    display: block;
   }
 
   .timeline-dot {

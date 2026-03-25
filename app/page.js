@@ -7,11 +7,11 @@ import { assets, toolsData } from "@/assets/assets";
 
 const navItems = [
   { label: "Profil", href: "#profile" },
-  { label: "Experience", href: "#experience" },
+  { label: "Expérience", href: "#experience" },
   { label: "Parcours", href: "#education" },
-  { label: "Activites", href: "#activities" },
+  { label: "Activités", href: "#activities" },
   { label: "Projets IA", href: "#projects" },
-  { label: "Competences", href: "#skills" },
+  { label: "Compétences", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,7 +22,7 @@ const proofPoints = [
 ];
 
 const alternanceSignals = [
-  "À la recherche d'un Alternance - Data Scientist & ingénieur IA",
+  "À la recherche d'une Alternance - Data Scientist & Ingénieur IA",
   "Cycle d'ingénieur 2023 - 2026 (FST Tanger)",
 ];
 
@@ -191,11 +191,13 @@ const academicTimeline = [
 const extracurricularActivities = [
   {
     category: "Hackathon",
-    title: "1er prix - Hackathon #1",
-    period: "Date a preciser",
+    title: "3eme place - Data2025 Hackathon (Sustainable Mobility)",
+    period: "26 - 27 Avril 2025 (CODE212, Tanger)",
+    image: "/3rd%20place%20hackatton.png",
+    imageAlt: "Data2025 Hackathon - 3eme place (Verdant Vectors)",
     description:
-      "Conception d'une solution innovante en equipe, du cadrage du probleme a la demonstration finale devant le jury.",
-    highlight: "Victoire 1/3",
+      "3eme place avec l'equipe Verdant Vectors. Notre solution VerdeWay combine recommandations d'itineraires eco-friendly, transport multimodal optimise et points de recompense verts, propulses par un moteur IA d'optimisation d'itineraire.",
+    highlight: "Verdant Vectors - VerdeWay",
   },
   {
     category: "Hackathon",
@@ -216,7 +218,9 @@ const extracurricularActivities = [
   {
     category: "Leadership",
     title: "President du club IT GEEKS",
-    period: "Mandat a preciser",
+    duration: "Septembre 2023 - Juin 2024",
+    image: "/Team%20Leader.png",
+    imageAlt: "Badr Benabdellah - Team Leader",
     description:
       "Animation du club, organisation d'activites techniques et coordination des membres autour de projets, ateliers et evenements.",
     highlight: "Responsabilite associative",
@@ -340,10 +344,88 @@ const getCompanyBadge = (company) =>
     .join("")
     .toUpperCase();
 
+const DownloadIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 3v10" />
+    <path d="M7 10l5 5 5-5" />
+    <path d="M4 17v3h16v-3" />
+  </svg>
+);
+
+const ExternalLinkIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 5h5v5" />
+    <path d="M10 14L19 5" />
+    <path d="M19 14v5h-5" />
+    <path d="M5 10v9h9" />
+  </svg>
+);
+
+const CopyIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 9h10v10H9z" />
+    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+  </svg>
+);
+
+const MailIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <path d="M3 7l9 7 9-7" />
+  </svg>
+);
+
+const PhoneIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .8 3a2 2 0 01-.5 2.1L9 10a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c1 .4 2 .7 3 .8a2 2 0 011.7 2z" />
+  </svg>
+);
+
+const PaperPlaneIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 2L11 13" />
+    <path d="M22 2l-7 20-4-9-9-4z" />
+  </svg>
+);
+
+const ArrowUpIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 19V5" />
+    <path d="M5 12l7-7 7 7" />
+  </svg>
+);
+
+const LinkedInIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5zM0 8h5v16H0V8zm8 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7C21.4 7.5 24 10.1 24 15.6V24h-5v-7.5c0-1.8-.1-4.2-2.6-4.2-2.6 0-3 2-3 4.1V24H8V8z" />
+  </svg>
+);
+
+const GitHubIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M12 0.5C5.37 0.5 0 5.87 0 12.5c0 5.29 3.44 9.78 8.2 11.36.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58C20.56 22.28 24 17.79 24 12.5 24 5.87 18.63 0.5 12 0.5z" />
+  </svg>
+);
+
 export default function Home() {
   const [result, setResult] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [contactTopic, setContactTopic] = useState("Alternance");
+  const [isEmailCopied, setIsEmailCopied] = useState(false);
   const currentYear = new Date().getFullYear();
+  const contactEmail = "benabdellahbadr3@gmail.com";
+  const contactPhone = "0634562555";
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(contactEmail);
+      setIsEmailCopied(true);
+      window.setTimeout(() => setIsEmailCopied(false), 1500);
+    } catch (error) {
+      console.error(error);
+      setIsEmailCopied(false);
+    }
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -456,7 +538,7 @@ export default function Home() {
           <div className="mt-6 space-y-3">
             <div className="rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
               <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">Cible</p>
-              <p className="mt-1 text-sm font-semibold">Stage PFE Ingenieur IA / Data</p>
+              <p className="mt-1 text-sm font-semibold">Alternance Data Scientist & Ingénieur IA</p>
             </div>
             <div className="rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
               <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">Contact rapide</p>
@@ -508,7 +590,7 @@ export default function Home() {
 
           <div className="mt-8 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
             <article className="glass-card rounded-2xl p-5 sm:p-6">
-                <p className="text-sm font-semibold text-[color:var(--muted)] sm:text-base">
+              <p className="text-sm font-semibold text-[color:var(--muted)] sm:text-base">
                 Mes axes de spécialisation prioritaires sont les suivants :
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -625,6 +707,7 @@ export default function Home() {
                       <article className="timeline-card timeline-card-experience rounded-3xl p-6">
                         <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
                         <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
+                        <p className="timeline-period-inline">{item.period}</p>
 
                         <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
                           {item.points.map((point) => (
@@ -680,6 +763,7 @@ export default function Home() {
                       <article className="timeline-card timeline-card-experience rounded-3xl p-6">
                         <h3 className="font-display text-3xl leading-tight text-white">{item.role}</h3>
                         <p className="mt-1 text-base font-semibold text-white/75">{item.company}</p>
+                        <p className="timeline-period-inline">{item.period}</p>
 
                         <ul className="timeline-points mt-5 grid gap-3 text-sm text-white/85">
                           {item.points.map((point) => (
@@ -748,6 +832,7 @@ export default function Home() {
                       <article className="timeline-card timeline-card-academic rounded-3xl p-6">
                         <h3 className="timeline-degree">{degreeNode}</h3>
                         <p className="timeline-school">{item.school}</p>
+                        <p className="timeline-period-inline">{item.period}</p>
 
                         <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">
                           {item.points.map((point) => (
@@ -803,6 +888,7 @@ export default function Home() {
                       <article className="timeline-card timeline-card-academic rounded-3xl p-6">
                         <h3 className="timeline-degree">{degreeNode}</h3>
                         <p className="timeline-school">{item.school}</p>
+                        <p className="timeline-period-inline">{item.period}</p>
 
                         <ul className="timeline-points timeline-points-academic mt-5 grid gap-3 text-sm text-white/85">
                           {item.points.map((point) => (
@@ -836,19 +922,42 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-5 md:grid-cols-2"
         >
-          {extracurricularActivities.map((activity) => (
-            <motion.article key={activity.title} variants={itemVariants} className="glass-card rounded-3xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-                {activity.category}
-              </p>
-              <h3 className="mt-2 font-display text-2xl leading-tight">{activity.title}</h3>
-              <p className="mt-1 text-sm font-semibold text-[color:var(--muted)]">{activity.period}</p>
-              <p className="mt-4 text-sm text-[color:var(--muted)]">{activity.description}</p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
-                {activity.highlight}
-              </p>
-            </motion.article>
-          ))}
+          {extracurricularActivities.map((activity) => {
+            const periodLine = activity.duration ? `Durée : ${activity.duration}` : activity.period;
+
+            return (
+              <motion.article key={activity.title} variants={itemVariants} className="glass-card overflow-hidden rounded-3xl">
+                {activity.image ? (
+                  <a href={activity.image} target="_blank" rel="noreferrer" className="block cursor-zoom-in">
+                    <div className="relative h-80 w-full border-b border-[#d2c8b8] bg-white/85 sm:h-[22rem]">
+                      <Image
+                        src={activity.image}
+                        alt={activity.imageAlt || activity.title}
+                        fill
+                        sizes="(min-width: 768px) 520px, 100vw"
+                        quality={95}
+                        className="object-contain p-4"
+                      />
+                    </div>
+                  </a>
+                ) : null}
+
+                <div className="p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                    {activity.category}
+                  </p>
+                  <h3 className="mt-2 font-display text-2xl leading-tight">{activity.title}</h3>
+                  {periodLine ? (
+                    <p className="mt-1 text-sm font-semibold text-[color:var(--muted)]">{periodLine}</p>
+                  ) : null}
+                  <p className="mt-4 text-sm text-[color:var(--muted)]">{activity.description}</p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                    {activity.highlight}
+                  </p>
+                </div>
+              </motion.article>
+            );
+          })}
         </motion.div>
       </section>
 
@@ -948,94 +1057,295 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={sectionTransition}
-        className="section-anchor mx-auto grid w-[min(1120px,92%)] gap-8 pb-20 pt-14 lg:grid-cols-[0.9fr_1.1fr]"
+        className="section-anchor mx-auto w-[min(1120px,92%)] pb-24 pt-14"
       >
-        <article className="glass-card rounded-3xl p-7">
-          <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">Contact direct</p>
-          <h2 className="mt-2 font-display text-3xl">Parlons de votre sujet PFE</h2>
-          <p className="mt-4 text-sm text-[color:var(--muted)]">
-            Je suis disponible pour un premier echange sur votre sujet de stage PFE, vos enjeux
-            techniques et la valeur que je peux apporter a votre equipe.
-          </p>
-
-          <div className="mt-6 rounded-2xl border border-[#d2c8b8] bg-white/70 p-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">Email</p>
-            <p className="mt-1 text-base font-semibold">benabdellahbadr3@gmail.com</p>
-            <p className="mt-1 text-sm text-[color:var(--muted)]">Tel: 0634562555</p>
+        <div className="contact-surface px-6 py-12 sm:px-10 sm:py-14">
+          <div className="relative z-10 max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--muted)]">Contact</p>
+            <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">
+              Construisons quelque chose d&apos;<span className="text-gradient">intelligent</span>
+            </h2>
+            <p className="mt-4 text-sm text-[color:var(--muted)] sm:text-base [text-wrap:pretty]">
+              Data Scientist & AI Engineer, je recherche une alternance 2026/2027 et je suis ouvert aux offres d&apos;emploi, missions freelance,
+              collaborations et questions autour de l&apos;IA, du ML, des LLMs et des projets data.
+            </p>
           </div>
 
-          <ul className="mt-5 space-y-3">
-            {contactLinks.map((link) => (
-              <li key={link.label}>
+          <div className="relative z-10 mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <article className="contact-card rounded-[2.25rem] p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--accent-alt)]">Accès rapide</p>
+              <h3 className="mt-2 font-display text-2xl">CV, email & réseaux</h3>
+              <p className="mt-3 text-sm text-[color:var(--muted)]">
+                Pour aller vite : téléchargez mon CV, copiez mon email, ou contactez-moi via LinkedIn/GitHub (alternance, emploi, freelance,
+                collaboration).
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-3">
                 <a
-                  href={link.href}
+                  href="/Resume_Badr_Benabdellah.pdf"
+                  download
+                  className="inline-flex items-center gap-2 rounded-full border border-[rgba(15,153,141,0.35)] bg-[rgba(15,153,141,0.08)] px-5 py-2 text-sm font-semibold transition hover:bg-[rgba(15,153,141,0.12)]"
+                >
+                  Télécharger CV
+                  <DownloadIcon className="h-4 w-4" />
+                </a>
+
+                <a
+                  href="#top"
+                  className="inline-flex items-center gap-2 rounded-full border border-[rgba(126,134,156,0.32)] bg-white/70 px-5 py-2 text-sm font-semibold text-[color:var(--muted)] transition hover:bg-white"
+                >
+                  Retour en haut
+                  <ArrowUpIcon className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <a
+                  href="https://www.linkedin.com/in/badr-benabdellah/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between rounded-2xl border border-[#d2c8b8] bg-white/70 px-4 py-3 transition hover:bg-white"
+                  className="contact-tile"
                 >
-                  <span className="text-sm font-semibold">{link.label}</span>
-                  <span className="text-xs text-[color:var(--muted)]">{link.value}</span>
+                  <span className="contact-tile-icon">
+                    <LinkedInIcon className="h-5 w-5" />
+                  </span>
+                  <div className="contact-tile-body">
+                    <p className="contact-tile-title">LinkedIn</p>
+                    <p className="contact-tile-subtitle truncate">linkedin.com/in/badr-benabdellah</p>
+                  </div>
+                  <ExternalLinkIcon className="contact-tile-action" />
                 </a>
-              </li>
-            ))}
-          </ul>
-        </article>
 
-        <article className="glass-card rounded-3xl p-7">
-          <h3 className="font-display text-3xl">Envoyer un message</h3>
-          <p className="mt-2 text-sm text-[color:var(--muted)]">
-            Decrivez votre sujet ou votre offre de stage PFE IA/Data.
-          </p>
+                <a
+                  href="https://github.com/badrbenabdellah"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-tile"
+                >
+                  <span className="contact-tile-icon">
+                    <GitHubIcon className="h-5 w-5" />
+                  </span>
+                  <div className="contact-tile-body">
+                    <p className="contact-tile-title">GitHub</p>
+                    <p className="contact-tile-subtitle truncate">github.com/badrbenabdellah</p>
+                  </div>
+                  <ExternalLinkIcon className="contact-tile-action" />
+                </a>
 
-          <form onSubmit={onSubmit} className="mt-6 space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Votre nom"
-                className="rounded-xl border border-[#c8bdab] bg-white/85 p-3 text-sm outline-none transition focus:border-[#0f766e]"
-              />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Votre email"
-                className="rounded-xl border border-[#c8bdab] bg-white/85 p-3 text-sm outline-none transition focus:border-[#0f766e]"
-              />
-            </div>
+                <div className="contact-tile">
+                  <span className="contact-tile-icon">
+                    <MailIcon className="h-5 w-5" />
+                  </span>
+                  <div className="contact-tile-body">
+                    <p className="contact-tile-title">Email</p>
+                    <p className="contact-tile-subtitle truncate">{contactEmail}</p>
+                  </div>
 
-            <textarea
-              rows="6"
-              name="message"
-              required
-              placeholder="Votre message"
-              className="w-full rounded-xl border border-[#c8bdab] bg-white/85 p-3 text-sm outline-none transition focus:border-[#0f766e]"
-            />
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="contact-copy-btn"
+                  >
+                    {isEmailCopied ? "Copié" : "Copier"}
+                    <CopyIcon className="h-4 w-4" />
+                  </button>
+                </div>
 
-            <button
-              type="submit"
-              disabled={isSending}
-              className="primary-btn rounded-full px-7 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {isSending ? "Envoi..." : "Envoyer votre offre de stage PFE"}
-            </button>
+                <a
+                  href={`tel:${contactPhone}`}
+                  className="contact-tile"
+                >
+                  <span className="contact-tile-icon">
+                    <PhoneIcon className="h-5 w-5" />
+                  </span>
+                  <div className="contact-tile-body">
+                    <p className="contact-tile-title">Téléphone</p>
+                    <p className="contact-tile-subtitle truncate">{contactPhone}</p>
+                  </div>
+                </a>
+              </div>
 
-            {result ? <p className="text-sm text-[color:var(--muted)]">{result}</p> : null}
-          </form>
-        </article>
+              <div className="mt-6 rounded-3xl border border-[rgba(126,134,156,0.22)] bg-white/65 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--muted)]">Idéal pour</p>
+                <ul className="mt-4 space-y-3 text-sm text-[color:var(--muted)]">
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-[color:var(--accent)]" />
+                    Alternance / offre d&apos;emploi Data Scientist ou AI Engineer (2026/2027).
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-[color:var(--accent-alt)]" />
+                    Freelance data/IA : pipelines, dashboards, RAG/LLMs et intégration applicative.
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-[color:var(--accent)]" />
+                    Collaboration technique : stack, architecture, livrables et déploiement (MLOps).
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Data Science", "Machine Learning", "LLMs / RAG", "MLOps"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full border border-[rgba(126,134,156,0.28)] bg-white/70 px-3 py-1.5 text-xs font-semibold text-[color:var(--muted)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+
+            <article className="contact-card rounded-[2.25rem] p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--accent-alt)]">Message</p>
+              <h3 className="mt-2 font-display text-2xl">Dites-moi ce que vous voulez construire</h3>
+              <p className="mt-3 text-sm text-[color:var(--muted)]">
+                Sélectionnez un sujet (emploi, freelance, alternance, etc.), puis décrivez le contexte. Je reviens vers vous rapidement.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Alternance", "Offre d'emploi", "Freelance", "Collaboration", "Question"].map((topic) => {
+                  const isActive = contactTopic === topic;
+
+                  return (
+                    <button
+                      key={topic}
+                      type="button"
+                      onClick={() => setContactTopic(topic)}
+                      className={[
+                        "contact-chip rounded-full px-4 py-2 text-xs font-semibold",
+                        isActive ? "contact-chip-active" : null,
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                    >
+                      {topic}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <form onSubmit={onSubmit} className="mt-6 space-y-4">
+                <input type="hidden" name="topic" value={contactTopic} />
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">Nom</span>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Votre nom"
+                      className="w-full rounded-2xl border border-[rgba(126,134,156,0.32)] bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-[color:var(--accent-alt)] focus:ring-2 focus:ring-[rgba(15,153,141,0.18)]"
+                    />
+                  </label>
+
+                  <label className="space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">Email</span>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="vous@email.com"
+                      className="w-full rounded-2xl border border-[rgba(126,134,156,0.32)] bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-[color:var(--accent-alt)] focus:ring-2 focus:ring-[rgba(15,153,141,0.18)]"
+                    />
+                  </label>
+                </div>
+
+                <label className="space-y-2">
+                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                    Organisation (optionnel)
+                  </span>
+                  <input
+                    type="text"
+                    name="organisation"
+                    placeholder="Entreprise / école / équipe"
+                    className="w-full rounded-2xl border border-[rgba(126,134,156,0.32)] bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-[color:var(--accent-alt)] focus:ring-2 focus:ring-[rgba(15,153,141,0.18)]"
+                  />
+                </label>
+
+                <label className="space-y-2">
+                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">Message</span>
+                  <textarea
+                    rows="6"
+                    name="message"
+                    required
+                    placeholder="Décrivez votre besoin, le contexte, et ce que vous attendez (objectif, délai, contraintes)..."
+                    className="w-full resize-none rounded-2xl border border-[rgba(126,134,156,0.32)] bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-[color:var(--accent-alt)] focus:ring-2 focus:ring-[rgba(15,153,141,0.18)]"
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  className="primary-btn inline-flex w-fit items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {isSending ? "Envoi..." : "Envoyer le message"}
+                  <PaperPlaneIcon className="h-4 w-4" />
+                </button>
+
+                {result ? <p className="text-sm text-[color:var(--muted)]">{result}</p> : null}
+              </form>
+            </article>
+          </div>
+        </div>
       </motion.section>
 
-      <footer className="border-t border-[#cec3b2] py-6">
-        <div className="mx-auto flex w-[min(1120px,92%)] flex-wrap items-center justify-between gap-3 text-sm text-[color:var(--muted)]">
-          <p>{`(c) ${currentYear} Badr Benabdellah. Tous droits reserves.`}</p>
-          <div className="flex gap-4">
-            <a href="/Resume_Badr_Benabdellah.pdf" download className="transition hover:text-[color:var(--ink)]">
-              CV PDF
-            </a>
-            <a href="#top" className="transition hover:text-[color:var(--ink)]">
-              Retour en haut
-            </a>
+      <footer className="pb-10 pt-6">
+        <div className="mx-auto w-[min(1120px,92%)]">
+          <div className="footer-pill flex flex-wrap items-center justify-between gap-5 px-6 py-5 sm:px-7 sm:py-6">
+            <div className="min-w-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--muted)]">
+                Badr Benabdellah <span className="ml-2 text-[color:var(--accent-alt)]">Portfolio</span>
+              </p>
+              <p className="mt-2 text-sm text-[color:var(--muted)]">
+                Ingénieur IA • Alternance 2026/2027 — ouvert aux opportunités IA / Data / BI.
+              </p>
+              <p className="mt-2 text-xs text-[color:var(--muted)]">{`(c) ${currentYear} Badr Benabdellah. Tous droits reserves.`}</p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="/Resume_Badr_Benabdellah.pdf"
+                download
+                className="primary-btn inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold"
+              >
+                CV
+                <DownloadIcon className="h-4 w-4" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/badr-benabdellah/"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-icon grid h-10 w-10 place-items-center rounded-full text-[color:var(--ink)]"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/badrbenabdellah"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-icon grid h-10 w-10 place-items-center rounded-full text-[color:var(--ink)]"
+                aria-label="GitHub"
+              >
+                <GitHubIcon className="h-5 w-5" />
+              </a>
+              <a
+                href={`mailto:${contactEmail}`}
+                className="footer-icon grid h-10 w-10 place-items-center rounded-full text-[color:var(--ink)]"
+                aria-label="Email"
+              >
+                <MailIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="#top"
+                className="footer-icon grid h-10 w-10 place-items-center rounded-full text-[color:var(--ink)]"
+                aria-label="Retour en haut"
+              >
+                <ArrowUpIcon className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
